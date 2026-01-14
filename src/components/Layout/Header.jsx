@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logos/logo_futuristic.png';
+import { companyData } from '../../data/companyData';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,8 +9,8 @@ const Header = () => {
         <header className="glass-nav" style={{ height: 'var(--nav-height)' }}>
             <div className="container" style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Link to="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }} onClick={() => setIsMenuOpen(false)}>
-                    <img src={logo} alt="EduTechAI Logo" style={{ height: '40px', width: 'auto', borderRadius: '4px' }} />
-                    <span className="text-gradient" style={{ fontSize: '1.5rem', fontWeight: '800' }}>EduTechAI</span>
+                    <img src={logo} alt={`${companyData.name} Logo`} style={{ height: '40px', width: 'auto', borderRadius: '4px' }} />
+                    <span className="text-gradient" style={{ fontSize: '1.5rem', fontWeight: '800' }}>{companyData.name}</span>
                 </Link>
 
                 <button
