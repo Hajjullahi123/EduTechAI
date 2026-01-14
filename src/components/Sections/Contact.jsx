@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { companyData } from '../../data/companyData';
 
 const Contact = () => {
