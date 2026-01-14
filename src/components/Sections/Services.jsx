@@ -1,50 +1,55 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+import { servicesData } from '../../data/servicesData';
 
-const ServiceCard = ({ title, description, icon }) => (
-    <div style={{
-        background: 'var(--bg-card)',
-        padding: '2rem',
-        borderRadius: 'var(--radius-lg)',
-        border: '1px solid rgba(255,255,255,0.05)',
-        transition: 'transform 0.3s, border-color 0.3s'
-    }}
-        onMouseEnter={(e) => {
-            e.currentTarget.style.transform = 'translateY(-5px)';
-            e.currentTarget.style.borderColor = 'var(--primary)';
-        }}
-        onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)';
-        }}
-    >
+const ServiceCard = ({ title, description, icon, id }) => (
+    <Link to={`/service/${id}`} style={{ display: 'block' }}>
         <div style={{
-            width: '50px',
-            height: '50px',
-            background: 'rgba(79, 70, 229, 0.1)',
-            borderRadius: 'var(--radius-sm)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginBottom: '1.5rem',
-            color: 'var(--primary)',
-            fontSize: '1.5rem'
-        }}>
-            {icon}
+            background: 'var(--bg-card)',
+            padding: '2rem',
+            height: '100%',
+            borderRadius: 'var(--radius-lg)',
+            border: '1px solid rgba(255,255,255,0.05)',
+            transition: 'transform 0.3s, border-color 0.3s, box-shadow 0.3s'
+        }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.borderColor = 'var(--primary)';
+                e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)';
+                e.currentTarget.style.boxShadow = 'none';
+            }}
+        >
+            <div style={{
+                width: '50px',
+                height: '50px',
+                background: 'rgba(79, 70, 229, 0.1)',
+                borderRadius: 'var(--radius-sm)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '1.5rem',
+                color: 'var(--primary)',
+                fontSize: '1.5rem'
+            }}>
+                {icon}
+            </div>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--text-main)' }}>{title}</h3>
+            <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>{description}</p>
+            <span style={{ color: 'var(--primary)', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                Learn More <span>→</span>
+            </span>
         </div>
-        <h3 style={{ marginBottom: '1rem' }}>{title}</h3>
-        <p style={{ color: 'var(--text-muted)' }}>{description}</p>
-    </div>
+    </Link>
 );
 
 const Services = () => {
-    const services = [
-        { title: "AI Integration", description: "Leverage the power of machine learning to automate workflows and gain predictive insights.", icon: "🤖" },
-        { title: "Cloud Solutions", description: "Scalable, secure, and efficient cloud architecture tailored to your enterprise needs.", icon: "☁️" },
-        { title: "Cybersecurity", description: "Advanced threat protection and security protocols to keep your data safe.", icon: "🛡️" },
-        { title: "EdTech Platforms", description: "Custom learning management systems designed for modern education.", icon: "🎓" },
-        { title: "Data Analytics", description: "Transform raw data into actionable intelligence for better decision making.", icon: "📊" },
-        { title: "IT Consulting", description: "Strategic guidance to align your technology roadmap with business goals.", icon: "💡" }
-    ];
+    const services = Object.entries(servicesData).map(([id, data]) => ({
+        id,
+        ...data
+    }));
 
     return (
         <section id="services" className="section-padding">
@@ -57,7 +62,7 @@ const Services = () => {
                 </div>
                 <div className="grid-3">
                     {services.map((s, index) => (
-                        <div key={index} className="animate-on-scroll" style={{ animationDelay: `${index * 0.1}s` }}>
+                        <div key={s.id} className="animate-on-scroll" style={{ animationDelay: `${index * 0.1}s` }}>
                             <ServiceCard {...s} />
                         </div>
                     ))}
