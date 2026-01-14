@@ -49,7 +49,7 @@ const Services = () => {
     return (
         <section id="services" className="section-padding">
             <div className="container">
-                <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="animate-on-scroll">
                     <h2 className="text-gradient">Our Expertise</h2>
                     <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto' }}>
                         Comprehensive IT solutions designed to elevate your operational efficiency.
@@ -57,7 +57,9 @@ const Services = () => {
                 </div>
                 <div className="grid-3">
                     {services.map((s, index) => (
-                        <ServiceCard key={index} {...s} />
+                        <div key={index} className="animate-on-scroll" style={{ animationDelay: `${index * 0.1}s` }}>
+                            <ServiceCard {...s} />
+                        </div>
                     ))}
                 </div>
             </div>

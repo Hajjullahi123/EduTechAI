@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import logo from '../../assets/logos/logo_futuristic.png';
 
 const Header = () => {
@@ -11,20 +12,22 @@ const Header = () => {
                     <span className="text-gradient" style={{ fontSize: '1.5rem', fontWeight: '800' }}>EduTechAI</span>
                 </a>
 
-                <nav className={`desktop-nav ${isMenuOpen ? 'open' : ''}`}>
-                    {/* Mobile Menu Toggle would go here logically for small screens, handling simply for now */}
-                    <ul style={{
-                        display: 'flex',
-                        gap: '2rem',
-                        listStyle: 'none',
-                        margin: 0,
-                        padding: 0,
-                        '@media (max-width: 768px)': { display: 'none' } // Simple inline for now, ideally in CSS
-                    }}>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><button className="btn-primary" style={{ padding: '0.5rem 1rem' }}>Get Started</button></li>
+                <button
+                    className="menu-toggle"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    aria-label="Toggle menu"
+                >
+                    <div className={`bar ${isMenuOpen ? 'open' : ''}`}></div>
+                    <div className={`bar ${isMenuOpen ? 'open' : ''}`}></div>
+                    <div className={`bar ${isMenuOpen ? 'open' : ''}`}></div>
+                </button>
+
+                <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
+                    <ul className="nav-links">
+                        <li><a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a></li>
+                        <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
+                        <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+                        <li><button className="btn-primary" style={{ width: '100%', marginTop: '1rem' }}>Get Started</button></li>
                     </ul>
                 </nav>
             </div>

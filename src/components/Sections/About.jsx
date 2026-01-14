@@ -10,7 +10,7 @@ const About = () => {
                     gap: '4rem',
                     alignItems: 'center'
                 }}>
-                    <div>
+                    <div className="animate-on-scroll">
                         <h2 className="text-gradient" style={{ marginBottom: '1.5rem' }}>Pioneering the Future of Education & Tech</h2>
                         <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
                             At EduTechAI, we believe that technology is the bridge to a smarter, more efficient future. Founded by a team of industry veterans, we specialize in merging educational frameworks with state-of-the-art AI and cloud computing.
