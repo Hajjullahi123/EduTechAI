@@ -19,7 +19,7 @@ const Hero = () => {
                 height: '50vw',
                 background: 'var(--primary)',
                 filter: 'blur(150px)',
-                opacity: 0.2,
+                opacity: 0.1,
                 borderRadius: '50%',
                 zIndex: -1
             }} />
@@ -31,14 +31,14 @@ const Hero = () => {
                 height: '40vw',
                 background: 'var(--secondary)',
                 filter: 'blur(150px)',
-                opacity: 0.15,
+                opacity: 0.1,
                 borderRadius: '50%',
                 zIndex: -1
             }} />
 
             <div className="container">
                 <div style={{ maxWidth: '800px' }}>
-                    <h1 className="reveal" style={{ marginBottom: '1.5rem' }}>
+                    <h1 className="reveal" style={{ marginBottom: '1.5rem', color: 'var(--text-main)' }}>
                         Transforming Business with <br />
                         <span className="text-gradient">Intelligent IT Solutions</span>
                     </h1>
@@ -55,7 +55,7 @@ const Hero = () => {
                         <button className="btn-primary">Explore Services</button>
                         <button style={{
                             background: 'transparent',
-                            border: '1px solid rgba(255,255,255,0.1)',
+                            border: '1px solid var(--border-color)',
                             color: 'var(--text-main)',
                             padding: '0.75rem 1.5rem',
                             borderRadius: 'var(--radius-md)',

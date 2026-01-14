@@ -46,7 +46,8 @@ const ServiceDetail = () => {
                                 background: 'var(--bg-card)',
                                 padding: '2rem',
                                 borderRadius: 'var(--radius-lg)',
-                                border: '1px solid rgba(255,255,255,0.05)',
+                                border: '1px solid var(--border-color)',
+                                boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
                                 animationDelay: `${index * 0.1}s`
                             }}>
                                 <h3 style={{ color: 'var(--primary)', marginBottom: '1rem' }}>{sub.title}</h3>

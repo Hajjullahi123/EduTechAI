@@ -34,7 +34,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
+                <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '2rem', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
                     &copy; {new Date().getFullYear()} {companyData.name}. All rights reserved.
                 </div>
             </div>

@@ -69,7 +69,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div style={{ background: 'var(--bg-card)', padding: '3rem', borderRadius: 'var(--radius-lg)', border: '1px solid rgba(255,255,255,0.05)' }} className="animate-on-scroll">
+                    <div style={{ background: 'var(--bg-card)', padding: '3rem', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-color)', boxShadow: '0 10px 30px rgba(0,0,0,0.04)' }} className="animate-on-scroll">
                         {status === 'success' ? (
                             <div style={{ textAlign: 'center', padding: '2rem' }}>
                                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎉</div>
@@ -88,15 +88,15 @@ const Contact = () => {
                                         value={formData.name}
                                         onChange={handleChange}
                                         style={{
-                                            background: 'var(--bg-dark)',
-                                            border: '1px solid rgba(255,255,255,0.1)',
+                                            background: '#f1f5f9',
+                                            border: '1px solid var(--border-color)',
                                             padding: '1rem',
                                             borderRadius: 'var(--radius-sm)',
-                                            color: 'white',
+                                            color: 'var(--text-main)',
                                             outline: 'none'
                                         }}
                                         onFocus={(e) => e.target.style.borderColor = 'var(--primary)'}
-                                        onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
+                                        onBlur={(e) => e.target.style.borderColor = 'var(--border-color)'}
                                     />
 
                                     <input
@@ -107,15 +107,15 @@ const Contact = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         style={{
-                                            background: 'var(--bg-dark)',
-                                            border: '1px solid rgba(255,255,255,0.1)',
+                                            background: '#f1f5f9',
+                                            border: '1px solid var(--border-color)',
                                             padding: '1rem',
                                             borderRadius: 'var(--radius-sm)',
-                                            color: 'white',
+                                            color: 'var(--text-main)',
                                             outline: 'none'
                                         }}
                                         onFocus={(e) => e.target.style.borderColor = 'var(--primary)'}
-                                        onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
+                                        onBlur={(e) => e.target.style.borderColor = 'var(--border-color)'}
                                     />
                                 </div>
 
@@ -127,16 +127,16 @@ const Contact = () => {
                                     value={formData.subject}
                                     onChange={handleChange}
                                     style={{
-                                        background: 'var(--bg-dark)',
-                                        border: '1px solid rgba(255,255,255,0.1)',
+                                        background: '#f1f5f9',
+                                        border: '1px solid var(--border-color)',
                                         padding: '1rem',
                                         borderRadius: 'var(--radius-sm)',
-                                        color: 'white',
+                                        color: 'var(--text-main)',
                                         outline: 'none',
                                         width: '100%'
                                     }}
                                     onFocus={(e) => e.target.style.borderColor = 'var(--primary)'}
-                                    onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
+                                    onBlur={(e) => e.target.style.borderColor = 'var(--border-color)'}
                                 />
 
                                 <textarea
@@ -147,17 +147,17 @@ const Contact = () => {
                                     value={formData.message}
                                     onChange={handleChange}
                                     style={{
-                                        background: 'var(--bg-dark)',
-                                        border: '1px solid rgba(255,255,255,0.1)',
+                                        background: '#f1f5f9',
+                                        border: '1px solid var(--border-color)',
                                         padding: '1rem',
                                         borderRadius: 'var(--radius-sm)',
-                                        color: 'white',
+                                        color: 'var(--text-main)',
                                         outline: 'none',
                                         width: '100%',
                                         resize: 'vertical'
                                     }}
                                     onFocus={(e) => e.target.style.borderColor = 'var(--primary)'}
-                                    onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
+                                    onBlur={(e) => e.target.style.borderColor = 'var(--border-color)'}
                                 ></textarea>
 
                                 <button

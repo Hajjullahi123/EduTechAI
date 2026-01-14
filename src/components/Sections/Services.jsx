@@ -9,17 +9,17 @@ const ServiceCard = ({ title, description, icon, id }) => (
             padding: '2rem',
             height: '100%',
             borderRadius: 'var(--radius-lg)',
-            border: '1px solid rgba(255,255,255,0.05)',
+            border: '1px solid var(--border-color)',
             transition: 'transform 0.3s, border-color 0.3s, box-shadow 0.3s'
         }}
             onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
                 e.currentTarget.style.borderColor = 'var(--primary)';
-                e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
+                e.currentTarget.style.boxShadow = '0 10px 40px rgba(0,0,0,0.08)';
             }}
             onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)';
+                e.currentTarget.style.borderColor = 'var(--border-color)';
                 e.currentTarget.style.boxShadow = 'none';
             }}
         >
