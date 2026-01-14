@@ -1,4 +1,12 @@
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Header from './components/Layout/Header';
+import Footer from './components/Layout/Footer';
+import Hero from './components/Sections/Hero';
+import Services from './components/Sections/Services';
+import Testimonials from './components/Sections/Testimonials';
+import About from './components/Sections/About';
+import Contact from './components/Sections/Contact';
 import ServiceDetail from './components/Sections/ServiceDetail';
 
 function ScrollToHash() {

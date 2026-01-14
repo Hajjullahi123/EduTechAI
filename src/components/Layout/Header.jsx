@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logos/logo_futuristic.png';
 import { companyData } from '../../data/companyData';
