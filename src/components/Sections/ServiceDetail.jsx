@@ -43,15 +43,16 @@ const ServiceDetail = () => {
                     <div className="grid-3">
                         {service.subServices.map((sub, index) => (
                             <div key={index} className="animate-on-scroll" style={{
-                                background: 'var(--bg-card)',
+                                background: 'var(--primary)',
                                 padding: '2rem',
                                 borderRadius: 'var(--radius-lg)',
-                                border: '1px solid var(--border-color)',
-                                boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
+                                border: 'none',
+                                boxShadow: '0 10px 30px rgba(79, 70, 229, 0.15)',
+                                color: 'white',
                                 animationDelay: `${index * 0.1}s`
                             }}>
-                                <h3 style={{ color: 'var(--primary)', marginBottom: '1rem' }}>{sub.title}</h3>
-                                <p style={{ color: 'var(--text-muted)' }}>{sub.description}</p>
+                                <h3 style={{ color: 'white', marginBottom: '1rem' }}>{sub.title}</h3>
+                                <p style={{ color: 'rgba(255, 255, 255, 0.8)' }}>{sub.description}</p>
                             </div>
                         ))}
                     </div>

@@ -5,42 +5,41 @@ import { servicesData } from '../../data/servicesData';
 const ServiceCard = ({ title, description, icon, id }) => (
     <Link to={`/service/${id}`} style={{ display: 'block' }}>
         <div style={{
-            background: 'var(--bg-card)',
+            background: 'var(--primary)',
             padding: '2rem',
             height: '100%',
             borderRadius: 'var(--radius-lg)',
-            border: '1px solid var(--border-color)',
-            transition: 'transform 0.3s, border-color 0.3s, box-shadow 0.3s'
+            border: 'none',
+            transition: 'transform 0.3s, box-shadow 0.3s',
+            boxShadow: '0 10px 30px rgba(79, 70, 229, 0.15)'
         }}
             onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.borderColor = 'var(--primary)';
-                e.currentTarget.style.boxShadow = '0 10px 40px rgba(0,0,0,0.08)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(79, 70, 229, 0.25)';
             }}
             onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'var(--border-color)';
-                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.boxShadow = '0 10px 30px rgba(79, 70, 229, 0.15)';
             }}
         >
             <div style={{
                 width: '50px',
                 height: '50px',
-                background: 'rgba(79, 70, 229, 0.1)',
+                background: 'rgba(255, 255, 255, 0.15)',
                 borderRadius: 'var(--radius-sm)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginBottom: '1.5rem',
-                color: 'var(--primary)',
+                color: 'white',
                 fontSize: '1.5rem'
             }}>
                 {icon}
             </div>
-            <h3 style={{ marginBottom: '1rem', color: 'var(--text-main)' }}>{title}</h3>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>{description}</p>
-            <span style={{ color: 'var(--primary)', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                Learn More <span>→</span>
+            <h3 style={{ marginBottom: '1rem', color: 'white' }}>{title}</h3>
+            <p style={{ color: 'rgba(255, 255, 255, 0.8)', marginBottom: '1.5rem' }}>{description}</p>
+            <span style={{ color: 'white', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                Learn More <span style={{ transition: 'transform 0.3s' }}>→</span>
             </span>
         </div>
     </Link>
