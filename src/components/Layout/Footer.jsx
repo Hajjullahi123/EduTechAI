@@ -1,3 +1,4 @@
+import React from 'react';
 import { companyData } from '../../data/companyData';
 
 const Footer = () => {
@@ -18,7 +19,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <h4>Links</h4>
-                        <ul style={{ listStyle: 'none', padding: 0, color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                        <ul style={{ listStyleType: 'none', padding: 0, color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                             <li><a href="#services">Services</a></li>
                             <li><a href="#about">About Us</a></li>
                             <li><a href="#contact">Contact</a></li>
@@ -26,7 +27,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <h4>Contact</h4>
-                        <ul style={{ listStyle: 'none', padding: 0, color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                        <ul style={{ listStyleType: 'none', padding: 0, color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                             <li>{companyData.email}</li>
                             <li>{companyData.phone}</li>
                             <li>{companyData.address}</li>

@@ -1,3 +1,4 @@
+import React from 'react';
 import aboutImage from '../../assets/about.svg';
 
 const About = () => {
